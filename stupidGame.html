@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stupidGame</title>
+</head>
+<style>
+    .gameWindow{
+        position: fixed;
+        top: 20%;
+        left: 30%;
+        bottom: 20%;
+        right: 30%;
+        border: 1px solid black;
+        border-radius: 24px;
+        background-color: yellow;
+    }
+    .heading{
+        width: 100%;
+        position: absolute;
+        top: 10%;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 36px;
+    }
+    .button{
+        position: absolute;
+        width: 130px;
+        height: 60px;
+    }
+    .yes{
+        top: 70%;
+        left: 20%;
+    }
+    .no{
+        top: 70%;
+        right: 20%;
+    }
+</style>
+<body>
+    <main class="gameWindow">
+        <h1 id="heading" class="heading">Ты играешь в бравл старс?</h1>
+        <button id="yes" class="button yes">Да</button>
+        <button id="no" class="button no">Нет</button>
+    </main>
+</body>
+<script>
+    let count = 0
+    yes.onclick = () => {
+        heading.innerHTML = 'я так и знал!'
+        yes.hidden = true
+        no.hidden = true
+    }
+    no.onclick = () => {
+    count++
+    if(count === 1) {
+        no.style.bottom = '200px'
+        no.style.let = '30px'
+        no.style.top = 'unset'
+        no.style.right = 'unset'
+    }
+    if(count === 2) {
+        no.style.bottom = '200px'
+        no.style.left = 'unset'
+        no.style.top = 'unset'
+        no.style.right = '100px'
+        no.disabled = true
+    }
+    }
+</script>
+</html>
